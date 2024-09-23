@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Cooker</title>
+  <link rel="icon" href="image/Log1.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="Admin.css">
+  <script src="https://kit.fontawesome.com/05615e47a7.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid px-10">
+    <div class="row">
+      <div class="col-md-3 container1">
+        <aside>
+          <div class="asidelogo">
+            <div class="logo">
+              <img src="image/چج.jpg" height="60" width="60">
+              <h2 style="font-size: x-large;">Res Name</h2>
+            </div>
+          </div>
+          <div class="sidebar">
+            <a href="#">
+              <i class="fa-brands fa-slack fa-lg" style="color: #000000;"></i>
+              <h3>Dashbord</h3>
+            </a>
+            <a href="#menu">
+              <i class="fa-solid fa-martini-glass-citrus" style="color: #000000;"></i>
+              <h3>Menu</h3>
+            </a>
+            <a href="#order">
+              <i class="fa-solid fa-feather" style="color: #000000;"></i>
+              <h3>Orders</h3>
+            </a>
+            <a href="#table">
+              <i class="fa-solid fa-utensils" style="color: #000000;"></i>
+              <h3>Table</h3>
+            </a>
+            <a href="contact.html" class="last" style="border: none; width: fit-content;">
+              <h3 class="back">Go Back</h3>
+            </a>
+            <button class="btn custom-btn">Log Out</button>
+          </div>
+        </aside>
+      </div>
+
+      <div class="col-md-9 col-12 container2">
+        <div class="container nb">
+          <div class="row">
+            <div class="col drop">
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-body">
+                  <div>
+                    <div class="asidelogo">
+                      <div class="logo">
+                        <img src="image/چج.jpg" height="60" width="60">
+                        <h2 style="font-size: x-large;">Res Name</h2>
+                      </div>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="sidebar">
+                      <a href="#">
+                        <i class="fa-brands fa-slack fa-lg" style="color: #000000;"></i>
+                        <h3>Dashbord</h3>
+                      </a>
+                      <a href="#menu">
+                        <i class="fa-solid fa-martini-glass-citrus" style="color: #000000;"></i>
+                        <h3>Menu</h3>
+                      </a>
+                      <a href="#order">
+                        <i class="fa-solid fa-feather" style="color: #000000;"></i>
+                        <h3>Orders</h3>
+                      </a>
+                      <a href="#table">
+                        <i class="fa-solid fa-utensils" style="color: #000000;"></i>
+                        <h3>Table</h3>
+                      </a>
+                      <a href="contact.html" class="last" style="border: none; width: fit-content;">
+                        <h3 class="back">Go Back</h3>
+                      </a>
+                      <button class="btn custom-btn">Log Out</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="dropdown">
+                <button class="btn btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="image/3d-calendar-alarm-clock-gold-250nw-2180563403.webp" alt="" width="50px" height="50px">
+                </button>
+                <ul class="dropdown-menu ">
+                  <li><input type="date" class="dropdown-item activ"></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col midia">
+              <form class="d-flex searching" role="search">
+                <input class=" " type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn" type="submit">Search</button>
+              </form>
+            </div>
+            <div class="col">
+              <div class="container-end leftside">
+                <table class="user">
+                  <tr>
+                    <td>
+                      <h6>Admin Name</h6>
+                    </td>
+                    <td>
+                      <div class="prof">
+                        <img src="image/profile.png" alt="">
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container cart">
+          <div class="row ">
+            <div class="col-md">
+              <div class="card">
+                <div class="card-body">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <img src="image/contract.png" alt="" width="62" height="62">
+                      </div>
+                      <div class="col d-flex justify-content-end">
+                        <h3>120</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="mb-0">Total Orders</h4>
+                  <div class="container d-flex justify-content-end m-0 p-0"><small>
+                      <p>60%</p>
+                    </small></div>
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar a" style="width: 60%"></div>
+                  </div>
+                  <p class="mb-0">Last 24 Hours</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card">
+                <div class="card-body">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <img src="image/investor.png" alt="" width="62" height="62">
+                      </div>
+                      <div class="col d-flex justify-content-end">
+                        <h3>185</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="mb-0">Total Clients</h4>
+                  <div class="container d-flex justify-content-end m-0 p-0"><small>
+                      <p>75%</p>
+                    </small></div>
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar b" style="width: 75%"></div>
+                  </div>
+                  <p class="mb-0">Last 24 Hours</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="card">
+                <div class="card-body">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <img src="image/income.png" alt="" width="62" height="62">
+                      </div>
+                      <div class="col d-flex justify-content-end">
+                        <h3>600</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="mb-0">Revenue</h4>
+                  <div class="container d-flex justify-content-end m-0 p-0"><small>
+                      <p>78%</p>
+                    </small></div>
+                  <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar c " style="width: 78%"></div>
+                  </div>
+                  <p class="mb-0">Last 24 Hours</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="card chart">
+                <div class="card-body">
+                  <div class="revenue-chart">
+                    <h3>Revenue</h3>
+                    <canvas id="revenueChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card text-center chart">
+                <div class="card-body">
+                  <h3>Daily Target Income</h3>
+                  <div class="progress-circle ">
+                    <div class="circle">
+                      <div class="circle-inner">
+                        <div class="progress-circle acircle">
+                          <div class="bcircle">
+                            <div class="circle-inner ccircle">
+                              <div class="percentage ">80%</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="income-text">
+                    <p>$800</p>
+                    <p>from $1000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div id="menu"><i class="fa-solid fa-martini-glass-citrus fa-lg" style="color: #000000;"></i>
+                <h3>Menu</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row tablerow">
+            <div class="col">
+              <div class="header">All Category</div>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Hide/Show</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Cheese Cake</td>
+                    <td><img src="image/cheese-cake2.PNG" alt="food image"></td>
+                    <td>
+                      <div class="form-check form-switch mx-auto">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                          checked>
+                      </div>
+                    </td>
+                    <td><button class="btn btn-edit btn-sm">Edit</button></td>
+                    <td><button class="btn btn-delete btn-sm">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Eclair</td>
+                    <td><img src="image/eclair.PNG" alt="food image"></td>
+                    <td>
+                      <div class="form-check form-switch mx-auto">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                          checked>
+                      </div>
+                    </td>
+                    <td><button class="btn btn-edit btn-sm">Edit</button></td>
+                    <td><button class="btn btn-delete btn-sm">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Pancake</td>
+                    <td><img src="image/pancake.jpg" alt="food image"></td>
+                    <td>
+                      <div class="form-check form-switch mx-auto">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                          checked>
+                      </div>
+                    </td>
+                    <td><button class="btn btn-edit btn-sm">Edit</button></td>
+                    <td><button class="btn btn-delete btn-sm">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Simit</td>
+                    <td><img src="image/simit.jpg" alt="food image"></td>
+                    <td>
+                      <div class="form-check form-switch mx-auto">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                          checked>
+                      </div>
+                    </td>
+                    <td><button class="btn btn-edit btn-sm">Edit</button></td>
+                    <td><button class="btn btn-delete btn-sm">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Croissant</td>
+                    <td><img src="image/crosan ffti.jpg" alt="food image"></td>
+                    <td>
+                      <div class="form-check form-switch mx-auto">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                          checked>
+                      </div>
+                    </td>
+                    <td><button class="btn btn-edit btn-sm">Edit</button></td>
+                    <td><button class="btn btn-delete btn-sm">Delete</button></td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Donut</td>
+                    <td><img src="image/Dount.PNG" alt="food image"></td>
+                    <td>
+                      <div class="form-check form-switch mx-auto">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                          checked>
+                      </div>
+                    </td>
+                    <td><button class="btn btn-edit btn-sm">Edit</button></td>
+                    <td><button class="btn btn-delete btn-sm">Delete</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div id="order"><i class="fa-solid fa-feather fa-lg" style="color: #000000;"></i>
+                <h2>Orders</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="container order-table">
+                <h3 class="mb-4">Last Orders</h3>
+                <table class="table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Customer</th>
+                      <th>Food</th>
+                      <th class="phon">Phone</th>
+                      <th>Price</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Name</td>
+                      <td>
+                        <img src="image/Dount.PNG" alt="Food Image" class="img-fluid rounded" width="50">
+                        Donut
+                      </td>
+                      <td class="phon">+93 1234567890</td>
+                      <td>$25.00</td>
+                      <td>Accepted</td>
+                      <td>
+                        <button class="btn-custom">Accept</button><br>
+                        <button class="btn-decline">Decline</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Name</td>
+                      <td>
+                        <img src="image/crosan ffti.jpg" alt="Food Image" class="img-fluid rounded" width="50">
+                        Croissant
+                      </td>
+                      <td class="phon">+93 1234567890</td>
+                      <td>$25.00</td>
+                      <td>Accepted</td>
+                      <td>
+                        <button class="btn-custom btn-sm">Accept</button><br>
+                        <button class="btn-decline btn-sm">Decline</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Name</td>
+                      <td>
+                        <img src="image/simit.jpg" alt="Food Image" class="img-fluid rounded" width="50">
+                        Simit
+                      </td>
+                      <td class="phon">+93 1234567890</td>
+                      <td>$25.00</td>
+                      <td>Pending</td>
+                      <td>
+                        <button class="btn-custom btn-sm">Accept</button><br>
+                        <button class="btn-decline btn-sm">Decline</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Name</td>
+                      <td>
+                        <img src="image/pancake.jpg" alt="Food Image" class="img-fluid rounded" width="50">
+                        Pancake
+                      </td>
+                      <td class="phon">+93 1234567890</td>
+                      <td>$25.00</td>
+                      <td>Accepted</td>
+                      <td>
+                        <button class="btn-custom">Accept</button><br>
+                        <button class="btn-decline">Decline</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Name</td>
+                      <td>
+                        <img src="image/eclair.PNG" alt="Food Image" class="img-fluid rounded" width="50">
+                        Eclair
+                      </td>
+                      <td class="phon">+93 1234567890</td>
+                      <td>$25.00</td>
+                      <td>Accepted</td>
+                      <td>
+                        <button class="btn-custom">Accept</button><br>
+                        <button class="btn-decline">Decline</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Name</td>
+                      <td>
+                        <img src="image/cheese-cake2.PNG" alt="Food Image" class="img-fluid rounded" width="50">
+                        Cheese Cake
+                      </td>
+                      <td class="phon">+93 1234567890</td>
+                      <td>$25.00</td>
+                      <td>Accepted</td>
+                      <td>
+                        <button class="btn-custom">Accept</button><br>
+                        <button class="btn-decline">Decline</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div id="table"><i class="fa-solid fa-utensils fa-lg" style="color: #000000;"></i>
+                <h3>Table</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row tableoforder">
+            <div class="col-lg-4">
+              <div class="card reserved-tables">
+                <div class="card-header text-dark">Reserved Tables</div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Name</span>
+                    <span>Table: 4</span>
+                    <span class="list-group-item text-primary">9:41 AM</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Name</span>
+                    <span>Table: 9</span>
+                    <span class="list-group-item text-primary">9:41 AM</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Name</span>
+                    <span>Table: 17</span>
+                    <span class="list-group-item text-primary">9:41 AM</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Name</span>
+                    <span>Table: 6</span>
+                    <span class="list-group-item text-primary">9:41 AM</span>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Name</span>
+                    <span>Table: 19</span>
+                    <span class="list-group-item text-primary">9:41 AM</span>
+                  </li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-8">
+              <div class="table-layout">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div class="reserved"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/restaurant.png"
+                    alt="reserved"></div>
+                <div>5</div>
+                <div class="reserved"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/restaurant.png"
+                    alt="reserved"></div>
+                <div>7</div>
+                <div>8</div>
+                <div class="reserved"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/restaurant.png"
+                    alt="reserved"></div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+                <div>13</div>
+                <div>14</div>
+                <div>15</div>
+                <div>16</div>
+                <div class="reserved"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/restaurant.png"
+                    alt="reserved"></div>
+                <div>18</div>
+                <div class="reserved"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/restaurant.png"
+                    alt="reserved"></div>
+                <div>20</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('revenueChart').getContext('2d');
+    const revenueChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [{
+          label: 'Revenue',
+          data: [10000, 15000, 12000, 18000, 22000, 24000, 20000],
+          borderColor: '#ED9110',
+          fill: false
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 25000
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
