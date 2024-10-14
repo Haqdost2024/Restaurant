@@ -375,6 +375,7 @@
   margin-top: 15px;
   padding: 5px 10px;
   border-radius: 3px;
+  color: black !important;
   box-shadow: 1px 1px 8px 3px #FCBE22;
 }
 .conter{
@@ -444,8 +445,8 @@
     height:50px;
 }
 .menu-image:hover{
-    border: 4px solid #EB5B00;
-    box-shadow:0 4px 10px orange;
+    border: 1px solid orange;
+    box-shadow:1px 1px 2px 3px orange;
 }
 .card{
   transition: all 0.5s;
@@ -499,7 +500,7 @@ h1,.card-title{
     text-transform: uppercase;
     border-radius: 25px;
     position: relative;
-    color: #EB5B00;
+    color: #EB5B00 !important;
     display: inline-block;
     transition: all 0.5s ease;
     text-align: center;
@@ -652,7 +653,7 @@ h1,.card-title{
   width: 250px;
   height: 250px;
   background-color: black;
-  color: white;
+  color: white !important;
   border-radius: 12px;
   padding: 15px;
   margin: 10px;
