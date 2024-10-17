@@ -211,6 +211,111 @@ function showFoods(mealType) {
   }
 }
 
+// ----------------------Chefs--------------
+
+const arrayData = [
+  {  
+      imageUrl : "image2/ch5.jpg",
+      Heading :"Aslan Amirchi",
+      para : "  He was born Turkey in 1985 , he is the master chef of our retuarant . He has more than 10 yrars of experience in this field.  And he graduated from the best university in Italy in the field of cooking .",
+  },
+  {
+      imageUrl : "image2/c2.jfif",
+      Heading :"Sugol Sakaria",
+      para : " She was born in Turkey in 1989  , and graduated from one of the Turkish universities in the field of cooking . And she has written many cookbooks . and all books are known in Turkey . " ,
+  },
+  {
+      imageUrl : "image2/c5.png",
+      Heading :"Ela Achi ",
+      para : "She was born in china in 1994 , and graduated from one of  the chinese universities in the field of cooking . She is very interested in cooking seafood . and her seafood has gained world fame." ,
+  },
+  {
+      imageUrl : "image2/c6.png",
+      Heading :"Carlo Adamo",
+      para : "He was born in Italy in 1995 , and he graduated from one of the Italy universities in the field of cooking. He is very professional in cooking famous Italian foods .   " ,
+  },
+]
+
+const cardContainer = document.getElementById('container')
+if(cardContainer){
+  const functionCards = () => {
+    arrayData.map((data) => {
+        cardContainer.innerHTML +=`
+        <div class="box">
+        <img class="image1" src="${data.imageUrl}" alt=""> 
+         <h4>${data.Heading}</h4>
+         <p class="text">${data.para}</p>
+             <button class="btn">Read more</button> 
+       </div>
+        `
+    })
+  }
+  functionCards();
+}
+
+
+const readMoreButtons = document.querySelectorAll(".btn");
+
+if(readMoreButtons){
+  readMoreButtons.forEach(item => {
+    item.addEventListener("click", () => {
+        const box = item.closest(".box");
+        const readMoreText = box.querySelector(".text");
+  
+        if(readMoreText.style.maxHeight){
+            readMoreText.style.maxHeight = null;
+            item.textContent = "Read More";
+            item.style.backgroundColor = "#fdca23";
+        } else{
+            readMoreText.style.maxHeight = readMoreText.scrollHeight + "px";
+            item.textContent = "Read Less";
+            item.style.backgroundColor = "#ff0000";
+        }
+    });
+  });
+}
+
+
+// ---------- Clients ---------------
+const cardData = [
+  {
+      para :"It was one of the best restuarants I have ever been to . the service is really great and the food is served on time.👌🙌",
+      image :"image2/cl2.jpg" ,
+      Heading :"Wat-- ---",
+  },
+  {
+      para :"By stepping there, a journey in the heart of history with a taste of authenticity.And every bite is a story ofancient culture.😎",
+      image :"image2/cl4.jpg" ,
+      Heading :"Son-- ---",
+  },
+  {
+      para :"What I found very intersting was the quiet place with its traditional at the same time modern decoration and classical music.🎶😊",
+      image :"image2/cl1.jpg" ,
+      Heading :"Jon- ---",
+  },
+]
+
+const PostContainer = document.querySelector('.container_clients');
+
+if(PostContainer){
+  const postMethods = () => {
+    cardData.map((postData) =>{
+       const postElement = document.createElement('div');
+      postElement.classList.add('cards','sadow');
+      postElement.innerHTML = `
+      <div>
+         <p> ${postData.para} </p>
+          <img class="image2" src="${postData.image}" alt="">
+          <h5 class="heading">${postData.Heading}</h5>
+      </div>
+      `
+       PostContainer.appendChild(postElement)
+    })
+ }
+ postMethods()
+ 
+}
+
 // =============random Color for every Sections=============
 function randname() {
   return Math.floor(Math.random() * 256);
@@ -236,6 +341,9 @@ logo.addEventListener('click', function () {
   for (let l = 0; l < back.length; l++) {
     back[l].style.background = `${color}`;
   }
+  for(let g=0;g< readMoreButtons.length;g++){
+    readMoreButtons[g].style.boxShadow=`1px 1px 8px 3px ${color}`;
+  }
   console.log(color);
 });
 for (let l = 0; l < imgs.length; l++) {
@@ -248,30 +356,6 @@ for (let l = 0; l < imgs.length; l++) {
     imgs[l].style.boxShadow = '';
   });
 }
-
-
-//---------------- CHEFS ---------------
-const readMoreButtons = document.querySelectorAll(".btn");
-
-readMoreButtons.forEach(item => {
-  item.addEventListener("click", () => {
-    const box = item.closest(".box");
-    const readMoreText = box.querySelector(".text");
-
-    if (readMoreText.style.maxHeight) {
-      readMoreText.style.maxHeight = null;
-      item.textContent = "Read More";
-      item.style.backgroundColor = "#fdca23";
-    } else {
-      readMoreText.style.maxHeight = readMoreText.scrollHeight + "px";
-      item.textContent = "Read Less";
-      item.style.backgroundColor = "#ff0000";
-    }
-  });
-});
-
-
-
 
 // ============AdminPanel=========================
 
